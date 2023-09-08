@@ -89,12 +89,14 @@ buttonSubmitForm.addEventListener("click", function (e) {
   let html = `
     <div class="card" id=${newBook.id}>
     <h4>${newBook.title}</h4>
-    <p>by ${newBook.author}</p>
-    <p>page: ${newBook.pages}</p>
+    <div class="card-content">
+      <p>by ${newBook.author}</p>
+      <p>Page count: ${newBook.pages}</p>
+    </div>
     <div class="button-container">
     <button class=${
       newBook.read ? "book-read" : "book-not-read"
-    }name="read-card">Read</button>       
+    } name="read-card">Read</button>       
     <button name="delete-card">Delete</button>
      </div>
   </div>
@@ -146,7 +148,7 @@ myLibrary.map((newBook, i) => {
     <h4>${newBook.title}</h4>
     <div class="card-content">
       <p class="card-author">by ${newBook.author}</p>
-      <p>pages: ${newBook.pages}</p>
+      <p>Page count: ${newBook.pages}</p>
     </div>
     <div class="button-container">
     <button class=${
