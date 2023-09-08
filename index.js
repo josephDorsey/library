@@ -12,40 +12,40 @@ const showBooks = document.querySelector(".button-show-books");
 const buttonCloseForm = document.querySelector(".button-close-form");
 const buttonSubmitForm = document.querySelector(".button-submit-form");
 
-const DUMMYLibrary = [
-  {
-    id: 420,
-    title: "The Catcher in the Rye",
-    author: "J.D. Salinger",
-    pages: 224,
-    read: true,
-  },
-  {
-    id: 421,
-    title: "To Kill a Mockingbird",
-    author: "Harper Lee",
-    pages: 336,
-    read: false,
-  },
-  {
-    id: 422,
-    title: "1984",
-    author: "George Orwell",
-    pages: 328,
-    read: true,
-  },
-  {
-    id: 423,
-    title: "Pride and Prejudice",
-    author: "Jane Austen",
-    pages: 432,
-    read: false,
-  },
-  // Add more books with random titles, authors, and read values as needed...
-];
-const myLibrary = DUMMYLibrary.map(
-  (book) => new Books(book.title, book.author, book.pages, book.read)
-);
+// const DUMMYLibrary = [
+//   {
+//     id: 420,
+//     title: "The Catcher in the Rye",
+//     author: "J.D. Salinger",
+//     pages: 224,
+//     read: true,
+//   },
+//   {
+//     id: 421,
+//     title: "To Kill a Mockingbird",
+//     author: "Harper Lee",
+//     pages: 336,
+//     read: false,
+//   },
+//   {
+//     id: 422,
+//     title: "1984",
+//     author: "George Orwell",
+//     pages: 328,
+//     read: true,
+//   },
+//   {
+//     id: 423,
+//     title: "Pride and Prejudice",
+//     author: "Jane Austen",
+//     pages: 432,
+//     read: false,
+//   },
+//   // Add more books with random titles, authors, and read values as needed...
+// ];
+// const myLibrary = DUMMYLibrary.map(
+//   (book) => new Books(book.title, book.author, book.pages, book.read)
+// );
 
 function Books(title, author, pages, read = false) {
   this.title = title;
@@ -142,21 +142,21 @@ booksContainer.addEventListener("click", function (e) {
   }
 });
 
-myLibrary.map((newBook, i) => {
-  let html = `
-  <div class="card" data-id=${i}>
-    <h4>${newBook.title}</h4>
-    <div class="card-content">
-      <p class="card-author">by ${newBook.author}</p>
-      <p>Page count: ${newBook.pages}</p>
-    </div>
-    <div class="button-container">
-    <button class=${
-      newBook.read ? "book-read" : "book-not-read"
-    } name="read-card">${newBook.read ? "Read" : "Not Read"}</button>
-      <button name="delete-card">Remove</button>
-    </div>
-  </div>
-  `;
-  booksContainer.insertAdjacentHTML("beforeend", html);
-});
+// myLibrary.map((newBook, i) => {
+//   let html = `
+//   <div class="card" data-id=${i}>
+//     <h4>${newBook.title}</h4>
+//     <div class="card-content">
+//       <p class="card-author">by ${newBook.author}</p>
+//       <p>Page count: ${newBook.pages}</p>
+//     </div>
+//     <div class="button-container">
+//     <button class=${
+//       newBook.read ? "book-read" : "book-not-read"
+//     } name="read-card">${newBook.read ? "Read" : "Not Read"}</button>
+//       <button name="delete-card">Remove</button>
+//     </div>
+//   </div>
+//   `;
+//   booksContainer.insertAdjacentHTML("beforeend", html);
+// });
