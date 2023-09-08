@@ -6,6 +6,8 @@
 
 body {
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 h1 {
   margin-left: 8px;
@@ -19,7 +21,6 @@ h1 {
   left: 0;
   right: 0;
   filter: blur(6px);
-  transition: all 4s;
 }
 .nav {
   display: flex;
@@ -44,6 +45,7 @@ h1 {
   background-color: #7086dd;
   left: 0;
   right: 0;
+  top: 120px;
   border-radius: 8px;
 }
 
