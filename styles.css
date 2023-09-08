@@ -109,6 +109,12 @@ button {
   border-bottom: 1px solid black;
   /* display: inline; */
 }
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .card-content > p {
   margin-top: 4px;
   margin-bottom: 4px;
