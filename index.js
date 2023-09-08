@@ -11,7 +11,7 @@ const showBooks = document.querySelector(".button-show-books");
 
 const buttonCloseForm = document.querySelector(".button-close-form");
 const buttonSubmitForm = document.querySelector(".button-submit-form");
-
+const overlay = document.querySelector(".overlay");
 // const DUMMYLibrary = [
 //   {
 //     id: 420,
@@ -46,6 +46,7 @@ const buttonSubmitForm = document.querySelector(".button-submit-form");
 // const myLibrary = DUMMYLibrary.map(
 //   (book) => new Books(book.title, book.author, book.pages, book.read)
 // );
+const myLibrary = [];
 
 function Books(title, author, pages, read = false) {
   this.title = title;
@@ -65,11 +66,13 @@ function Books(title, author, pages, read = false) {
 buttonOpenForm.addEventListener("click", function (e) {
   e.preventDefault();
   form.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 });
 
 buttonCloseForm.addEventListener("click", function (e) {
   e.preventDefault();
   form.classList.add("hidden");
+  overlay.classList.add("hidden");
 });
 
 inputRead.addEventListener("change", function (e) {
@@ -84,6 +87,7 @@ buttonSubmitForm.addEventListener("click", function (e) {
     inputPages.value,
     inputRead.value
   );
+  console.log(`clicked`);
   if (inputRead.value === "yes") newBook.toggleReadBook();
   myLibrary.push(newBook);
   let html = `
