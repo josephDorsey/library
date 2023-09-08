@@ -4,12 +4,23 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100%;
+}
 h1 {
   margin-left: 8px;
   margin-bottom: 8px;
   margin-top: 8px;
 }
-
+.overlay {
+  position: fixed;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0;
+  right: 0;
+  filter: blur(6px);
+  transition: all 4s;
+}
 .nav {
   display: flex;
   justify-content: space-between;
