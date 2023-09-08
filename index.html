@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <h1>Library</h1>
+    </nav>
+    <p class="message">
+      Welcome to the library archive! Add your favorite titles that you have
+      read or wish to read.
+    </p>
+    <div class="button-open-form-container">
+      <button class="button-open-form">+ New Book</button>
+    </div>
+
+    <div class="overlay">
+      <form class="form hidden">
+        <div>
+          <label> Title </label>
+          <input class="title" type="text" placeholder="Enter title name" />
+        </div>
+        <div>
+          <label> Author </label>
+          <input class="author" type="text" placeholder="Enter author name" />
+        </div>
+        <div>
+          <label> Pages </label>
+          <input class="pages" type="number" placeholder="Enter page count" />
+        </div>
+        <div>
+          <label> Have you read it? </label>
+          <select class="form-select-read">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+          </select>
+          <div class="button-container form-buttons">
+            <button class="button-close-form">Close</button>
+            <button class="button-submit-form" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <section class="section-books">
+      <div class="books-container"></div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
