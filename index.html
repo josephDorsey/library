@@ -18,33 +18,32 @@
       <button class="button-open-form">+ New Book</button>
     </div>
 
-    <div class="overlay">
-      <form class="form hidden">
-        <div>
-          <label> Title </label>
-          <input class="title" type="text" placeholder="Enter title name" />
+    <div class="overlay hidden"></div>
+    <form class="form hidden">
+      <div>
+        <label> Title </label>
+        <input class="title" type="text" placeholder="Enter title name" />
+      </div>
+      <div>
+        <label> Author </label>
+        <input class="author" type="text" placeholder="Enter author name" />
+      </div>
+      <div>
+        <label> Pages </label>
+        <input class="pages" type="number" placeholder="Enter page count" />
+      </div>
+      <div>
+        <label> Have you read it? </label>
+        <select class="form-select-read">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+        <div class="button-container form-buttons">
+          <button class="button-close-form">Close</button>
+          <button class="button-submit-form" type="submit">Submit</button>
         </div>
-        <div>
-          <label> Author </label>
-          <input class="author" type="text" placeholder="Enter author name" />
-        </div>
-        <div>
-          <label> Pages </label>
-          <input class="pages" type="number" placeholder="Enter page count" />
-        </div>
-        <div>
-          <label> Have you read it? </label>
-          <select class="form-select-read">
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-          </select>
-          <div class="button-container form-buttons">
-            <button class="button-close-form">Close</button>
-            <button class="button-submit-form" type="submit">Submit</button>
-          </div>
-        </div>
-      </form>
-    </div>
+      </div>
+    </form>
     <section class="section-books">
       <div class="books-container"></div>
     </section>
